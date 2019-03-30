@@ -31,7 +31,7 @@ public class MainActivity<mGoogleSignInClient> extends AppCompatActivity {
     FirebaseAuth mAuth;
     GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 2;
-//    GoogleApiClient mGoogleApiClient;
+    //    GoogleApiClient mGoogleApiClient;
     FirebaseAuth.AuthStateListener mAuthListner;
 
     @Override
@@ -51,9 +51,17 @@ public class MainActivity<mGoogleSignInClient> extends AppCompatActivity {
         button.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                signIn ();
+                Intent intent = new Intent (MainActivity.this, SecondActivity.class);
+                startActivity (intent);
             }
         });
+
+//        button.setOnClickListener (new View.OnClickListener () {
+//            @Override
+//            public void onClick(View v) {
+//                signIn ();
+//            }
+//        });
 
         mAuthListner = new FirebaseAuth.AuthStateListener () {
             @Override
@@ -66,21 +74,14 @@ public class MainActivity<mGoogleSignInClient> extends AppCompatActivity {
 
         button = findViewById (R.id.googleBtn);
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder (GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken (getString (R.string.default_web_client_id))
+                .requestEmail ()
+                .build ();
 
-        mGoogleSignInClient = GoogleSignIn.getClient (this,gso);
+        mGoogleSignInClient = GoogleSignIn.getClient (this, gso);
 
     }
-
-
-
-
-
-
-
 
 
     private void signIn() {
