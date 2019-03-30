@@ -26,12 +26,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<mGoogleSignInClient> extends AppCompatActivity {
     SignInButton button;
     FirebaseAuth mAuth;
     GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 2;
-    GoogleApiClient mGoogleApiClient;
+//    GoogleApiClient mGoogleApiClient;
     FirebaseAuth.AuthStateListener mAuthListner;
 
     @Override
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance ();
+
+        button = findViewById (R.id.googleBtn);
 
         button.setOnClickListener (new View.OnClickListener () {
             @Override
@@ -64,23 +66,22 @@ public class MainActivity extends AppCompatActivity {
 
         button = findViewById (R.id.googleBtn);
 
-        mGoogleApiClient = new GoogleApiClient.Builder (this)
-                .enableAutoManage (this, new GoogleApiClient.OnConnectionFailedListener () {
-                    @Override
-                    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-                        Toast.makeText (MainActivity.this, "djsnj", Toast.LENGTH_SHORT).show ();
-                    }
-                })
-                .addApi (Auth.GOOGLE_SIGN_IN_API, gso)
-                .build ();
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient (this,gso);
 
     }
 
-    // Configure Google Sign In
-    GoogleSignInOptions gso = new GoogleSignInOptions.Builder (GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken (getString (R.string.default_web_client_id))
-            .requestEmail ()
-            .build ();
+
+
+
+
+
+
+
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent ();
