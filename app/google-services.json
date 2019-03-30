@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "988363093685",
+    "firebase_url": "https://androidprojects-41476.firebaseio.com",
+    "project_id": "androidprojects-41476",
+    "storage_bucket": "androidprojects-41476.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988363093685:android:be81358ebc20b0c3",
+        "android_client_info": {
+          "package_name": "com.lolin.deemon_face.careforyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988363093685-b9l457oddse2kfvpe5uqul8u0mqc3p1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lolin.deemon_face.careforyou",
+            "certificate_hash": "5c8486ac729d9c110c024190c683383d850c5b47"
+          }
+        },
+        {
+          "client_id": "988363093685-3hb53u5u5j25onh0hr7jcvk49qgieb1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxHeyryDoAge_gqV7S9sz3T3NbFPuXvcE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988363093685-3hb53u5u5j25onh0hr7jcvk49qgieb1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
