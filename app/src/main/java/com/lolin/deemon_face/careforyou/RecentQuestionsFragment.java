@@ -1,8 +1,10 @@
 package com.lolin.deemon_face.careforyou;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +17,7 @@ import android.widget.ListView;
 public class RecentQuestionsFragment extends Fragment {
 
     private static final String TAG = "Recent Questions";
+
     public RecentQuestionsFragment(){
 
     }
@@ -44,7 +47,17 @@ public class RecentQuestionsFragment extends Fragment {
 
         listView.setAdapter (listViewAdapter);
 
+        FloatingActionButton fab = view.findViewById (R.id.addQuestion);
+        fab.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getActivity (),ThirdActivity.class);
+                startActivity (intent);
+            }
+        });
+
         return view;
+
 
 
 

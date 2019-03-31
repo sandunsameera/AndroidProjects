@@ -14,4 +14,7 @@
     <string name="hukapan">හුකපං</string>
     <string name="chat">චැට් කරන්න/Chat Room</string>
     <string name="recent">කාලීන ප්‍රශ්න/Recent questions</string>
+    <string name="ask_your_question">Ask Your Question</string>
+    <string name="title_of_the_question">Title of the question</string>
+    <string name="discription">Discription</string>
 </resources>

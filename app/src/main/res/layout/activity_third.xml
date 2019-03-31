@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+    <TextView
+        android:id="@+id/addQuestion"
+        android:layout_width="300dp"
+        android:layout_height="173dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="464dp"
+        android:text="@string/ask_your_question"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/QuestionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="371dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="315dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/title_of_the_question"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="201dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/discription"/>
+</RelativeLayout>
