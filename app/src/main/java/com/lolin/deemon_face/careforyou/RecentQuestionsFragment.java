@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +15,6 @@ import android.widget.ListView;
 public class RecentQuestionsFragment extends Fragment {
 
     private static final String TAG = "Recent Questions";
-
     public RecentQuestionsFragment(){
 
     }
@@ -26,9 +27,13 @@ public class RecentQuestionsFragment extends Fragment {
 
         String[] RecentQuestions = {"First Question",
                 "Second question",
-                "Third question"};
+                "Third question",
+        "fs",
+        "sfs",
+        "fsf",
+        "ss","dgjogn","dkgbhgb"};
 
-        ListView listView = view.findViewById (R.id.Question_listView);
+        ListView listView = view.findViewById (R.id.questionList);
 
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String> (
                 getActivity (),
@@ -38,6 +43,11 @@ public class RecentQuestionsFragment extends Fragment {
         );
 
         listView.setAdapter (listViewAdapter);
+
         return view;
+
+
+
+
     }
 }

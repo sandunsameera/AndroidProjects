@@ -7,4 +7,11 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
+    <string name="recent_question">Recent Question</string>
+    <string name="chatroom">ChatRoom</string>
+    <string name="fuck">fuck</string>
+    <string name="recent_questions">Recent Questions</string>
+    <string name="hukapan">හුකපං</string>
+    <string name="chat">චැට් කරන්න/Chat Room</string>
+    <string name="recent">කාලීන ප්‍රශ්න/Recent questions</string>
 </resources>
